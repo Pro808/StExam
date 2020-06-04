@@ -1,8 +1,8 @@
 const express = require('express');
-const userController = require('../controllers/users');
+const questController = require('../controllers/questController');
 
 const router = express.Router();
 
-router.post('/add', userController.addQuest);
-router.get("/get", userController.get);
+router.post('/add', questController.addQuest);
+router.get("/get", questController.get);
 module.exports = router;
