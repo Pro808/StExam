@@ -1,0 +1,41 @@
+{
+  "name": "stexam",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index",
+  "scripts": {
+    "full": "npm install && npm audit fix && nodemon -L",
+    "start": "nodemon -L"
+  },
+  "nodemonConfig": {
+    "verbose": true,
+    "ignore": [
+      "node_modules/*",
+      "public/images/*"
+    ],
+    "watch": [
+      "public/css/*",
+      "public/js/*",
+      "views/*",
+      "routes/*",
+      "models/*",
+      "controllers/*",
+      "utils/*",
+      "index.js"
+    ],
+    "restartable": "rs",
+    "ext": "js json css ejs"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mongodb": "^3.1.13",
+    "nodemon": "^1.19.0",
+    "npm": "^6.9.0",
+    "body-parser": "latest"
+  }
+}

@@ -1,0 +1,51 @@
+.wraper {
+	display: block;
+	width: 900px;
+	height: auto;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+.header {
+	line-height: 100px;
+	text-align: center;
+	font-size: 32px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.container {
+	display: block;
+}
+
+.question{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 50px;
+}
+.question p{
+	margin: 10px;
+}
+
+
+.question_input {
+	width: 100%;
+	height: 40px;
+	border: 1px dashed #ccc;
+	padding: 0 15px;
+}
+
+.btn {
+	height: 40px;
+	padding: 0 20px;
+	margin: 15px auto;
+	border: none;
+	background: #32800ad1;
+	color: #fff;
+	display: block;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #32800af7;
+}

@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+const db = require('./utils/db/db');
+
+const app = require('./utils/server/server');
+
+const uri = "mongodb+srv://Pro808:qwerty808@stexam-ypufz.mongodb.net/StExam?retryWrites=true&w=majority";
+
+const hostname = 'localhost';
+const port = 8080;
+
+/**
+ *  Говорим express слушать порт (port)
+ *  server - ссылка на порт, котоырй слушаем
+ * @param (port) - порт сервера
+ */
+const server = app.listen(port, () => {
+  console.log("Server created !");
+  console.log(`Server running at http://${hostname}:${port}/`);
+
+  /**
+   * Подключение к базе данных
+   * @param {url} - ссылка на базу данных
+   */
+  db.connect(uri, (err) => {
+    if (!err) {
+      console.log("Database connected!");
+    } else {
+      return console.log(err);
+    }
+  });
+});
