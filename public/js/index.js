@@ -43,16 +43,18 @@ window.onload = function () {
         }).success(function (data) {
             console.log(data);
             if (data.ok) {
+                let i = 1;
                 data.quests.reverse().forEach(function (item) {
                     let template = String.raw`
                                 <div class="question">
-                                <p>Вопрос номер: ${item._id} </p>
+                                <p>Вопрос номер: ${i} </p>
                                 <p>Английский вопрос: ${item.engQ}</p>
                                 <p>Русский вопрос: ${item.rusQ}</p>
                                 <p>Английский ответ: ${item.ansE}</p>
-                                <p>Русский ответ: ${item.ansR}</p>
+                                <p style="color: red; font-size: 20px">Русский ответ: ${item.ansR}</p>
                                 </div>`;
-                    $(".container").append(template)
+                    $(".container").append(template);
+                    i++;
                 });
             } else {
                 showMessgae(data.message, "add_event", "Ок", data);
